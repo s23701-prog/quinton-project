@@ -1,6 +1,7 @@
-import "./globals.css";
+// app/layout.js
 import { Poppins, Open_Sans } from "next/font/google";
-import Header from "@/app/header";
+import { getSession } from "@/actions/auth-actions";
+import Header from "@/components/header2";
 
 const poppins = Poppins({
   weight: ["600"],
@@ -19,11 +20,10 @@ export const metadata = {
   icons: { icon: "icon.png" },
 };
 
-export default function RootLayout({ children }) {
+export default async function ChildLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${openSans.variable}`}>
-        <Header />
         {children}
       </body>
     </html>
