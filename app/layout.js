@@ -22,6 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
       <body className={`${poppins.variable} ${openSans.variable}`}>
         <Header />
         {children}
